@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title>[예제6-22]함수</title>
+ <script>
+   
+
+function adder2(a, b){ // 함수작성
+    let sum;
+    sum = a + b;
+    return sum;
+ }
+ </script>
+ </head>
+ <body>
+ <h3>함수adder2()</h3>
+ <hr>
+ <script>
+    let n = prompt("첫 번째 정수를 입력하세요");
+   n = parseInt(n);
+   let  m = prompt("두 번째 정수를 입력하세요");
+    m = parseInt(m);
+
+    let x = adder2(n,m);
+    document.write( n + ' + ' + m +" 는 " + x);
+    
+ </script>
+
+ </body>
+ </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>[응용예제]자바스크립트 다이얼로그 활용</title>
+</head>
+<body>
+<script>
+let ret = prompt("이름을 입력하세요", "홍길동");
+if(ret == null){
+    // 취소 버튼이나 다이얼로그를 닫은 경우
+    document.write("<h3>취소 버튼을 눌렀습니다.</h3>"); 
+}
+else if(ret == ""){
+    // 문자열 입력 없이 확인 버튼 누른 경우
+    document.write("<h3>내용을 입력하지 않았습니다.</h3>");
+}
+else {
+    // ret에는 사용자가 입력한 문자열
+    alert(ret + "님 반갑습니다.");
+
+    document.write("<h2><maek>" + ret+"</mark>님의 오늘 일정입니다!!</h2> \
+        <hr><h4>1:30 북악관 617호 - 웹클라이언트컴퓨팅 수업</h4>");
+
+}
+</script>
+</body>
+</html>
