@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset = "utf-8">
+<title>웹클라이언트컴퓨팅 중간고사3</title>
+<body>
+<h1>웹클라이언트컴퓨팅 중간고사 3번</h1>
+<hr>
+<script>
+    function StdScore(){
+        this.name ;
+        this.year ;
+        this.subject = "웹클라이언트컴퓨팅";
+        this.score ;
+
+    }
+
+    let StdArray = new Array();
+    let std = new StdScore();
+    for(let i = 0; i<3; i++){
+         StdArray1 = prompt("학생 이름, 학년, 점수를 입력하세요. 단, 콤마를 사이에 넣어 작성.");
+        let arr = StdArray1.split(",");
+        std.name = arr[0];
+        std.year = arr[1];
+        std.score = parseInt(arr[2]);
+        StdArray[i] = std;
+        //document.write(std.name + ": " + std.year + "학년, " + std.subject + ", " + std.score + "점<br>");
+        document.write(StdArray[i].name + ": " + StdArray[i].year + "학년, " + StdArray[i].subject + ", " + StdArray[i].score + "점<br>");
+    }
+
+    let max = 0;
+    document.write(max); 
+    let maxi;
+    for(let i = 0; i<3; i++){
+        
+        if(StdArray[i].score > max){
+            max = StdArray[i].score;
+            //maxarr = StdArray[i];
+            //document.write(max); 
+            maxi = i; 
+        }         
+    }
+
+    document.write("<hr><h3>1등</h3>");
+    
+    document.write(StdArray[maxi].name + ": " + StdArray[maxi].year + "학년, " + StdArray[maxi].subject + ", " + max + "점");
+</script>
+</head>
+</body>
+</html>
